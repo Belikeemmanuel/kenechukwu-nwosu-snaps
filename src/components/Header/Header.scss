@@ -1,0 +1,38 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  padding: 1.5rem 1rem;
+  background-color: $background-primarycolor;
+  @include flex-style(row, center, space-between);
+
+  &__text {
+    color: $black-primarycolor;
+  }
+
+  &__button {
+    padding: 8px 16px;
+    border: 2px solid $forestgreen-primarycolor;
+    border-radius: 9999px;
+    background-color: $white-secondarycolor;
+    color: $forestgreen-primarycolor;
+    line-height: 0.9375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-family: $primary-font;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    @include tablet {
+      padding: 11px 22px;
+      line-height: 26px;
+      font-size: 20px;
+    }
+  }
+
+  &__icon {
+    font-size: 14px;
+  }
+}
