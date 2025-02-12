@@ -1,16 +1,18 @@
 import "./Filter.scss";
+import FilterTags from "../../data/tags.json";
 
 function Filter() {
   return (
     <div className="filter">
       <h3 className="filter__header">Filters</h3>
       <div className="filter__texts">
-        <p className="filter__tags">Arizona</p>
-        <p className="filter__tags">Bridge</p>
-        <p className="filter__tags">Buildings</p>
-        <p className="filter__tags">California</p>
-        <p className="filter__tags">Cars</p>
-        <p className="filter__tags">Cathedral</p>
+        {FilterTags.map((tag, index) => {
+          return (
+            <div key={index}>
+              <p className="filter__tags">{tag}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

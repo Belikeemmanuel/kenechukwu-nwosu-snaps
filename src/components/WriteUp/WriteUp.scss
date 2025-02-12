@@ -1,0 +1,22 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.our-mission {
+  background-color: $background-primarycolor;
+  padding: 1rem;
+
+  &__heading {
+    font-weight: 300;
+  }
+
+  &__writeup {
+    margin: 0rem;
+    padding: 24px 0px;
+    text-align: left;
+
+    &-italic {
+      font-style: italic;
+    }
+  }
+}
