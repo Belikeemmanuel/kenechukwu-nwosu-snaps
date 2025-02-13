@@ -3,7 +3,7 @@ import "./WriteUp.scss";
 function WriteUp() {
   return (
     <div className="our-mission">
-      <small className="our-mission__heading">Our mission:</small>
+      <p className="our-mission__heading">Our mission:</p>
       <h2 className="our-mission__writeup">
         Provide photographers a space to share photos of the neighborhoods they
         cherish,{" "}

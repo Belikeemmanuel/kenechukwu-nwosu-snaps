@@ -1,6 +1,7 @@
 import "./PhotoCardList.scss";
 import PhotoCard from "../PhotoCard/PhotoCard.jsx";
 import photoData from "../../data/photos.json";
+import { useState } from "react";
 
 function PhotoCardList() {
   return (

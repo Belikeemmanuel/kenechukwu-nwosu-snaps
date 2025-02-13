@@ -6,6 +6,15 @@
   background-color: $background-secondarycolor;
   padding: 1rem 1rem 0rem 1rem;
 
+  @include tablet {
+    padding: 32px;
+  }
+
+  @include desktop {
+    min-width: 33%;
+    padding: 56px;
+  }
+
   &__header {
     color: $black-primarycolor;
     margin: 0rem;
@@ -13,11 +22,20 @@
 
   &__texts {
     gap: 8px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: left;
     padding: 16px 0rem;
+
+    @include tablet {
+      padding: 2rem 0rem 2.5rem 0rem;
+    }
+
+    @include desktop {
+      padding: 3rem 0rem;
+    }
   }
 
   &__tags {
@@ -33,6 +51,7 @@
     @include tablet {
       padding: 0.5rem 0.75rem;
       border-radius: 0.75rem;
+      font-weight: 500;
     }
   }
 }

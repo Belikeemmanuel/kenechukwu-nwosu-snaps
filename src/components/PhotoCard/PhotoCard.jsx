@@ -6,14 +6,14 @@ function PhotoCard(props) {
     <div className="photo-card">
       <div className="photo-card__display">
         <img src={photo} alt={photoDescription} className="photo-card__image" />
-        <p className="photo-card__name">{photographer}</p>
+        <small className="photo-card__name">{photographer}</small>
       </div>
       <div className="photo-card__tags">
         {tags.map((tag, index) => {
           return (
-            <p key={index} className="photo-card__tags-item">
+            <small key={index} className="photo-card__tags-item">
               {tag}
-            </p>
+            </small>
           );
         })}
       </div>

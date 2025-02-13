@@ -1,7 +1,7 @@
 import "./Filter.scss";
 import FilterTags from "../../data/tags.json";
 
-function Filter() {
+function Filter({ filterAllTag }) {
   return (
     <div className="filter">
       <h3 className="filter__header">Filters</h3>
@@ -9,7 +9,14 @@ function Filter() {
         {FilterTags.map((tag, index) => {
           return (
             <div key={index}>
-              <p className="filter__tags">{tag}</p>
+              <small
+                onClick={() => {
+                  filterAllTag(tag);
+                }}
+                className="filter__tags"
+              >
+                {tag}
+              </small>
             </div>
           );
         })}

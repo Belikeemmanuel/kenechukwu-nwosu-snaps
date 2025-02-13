@@ -1,3 +1,22 @@
 @use "../../styles/partials/global";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.photo-card-list {
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-primarycolor;
+
+  @include tablet {
+    width: 100%;
+    padding-bottom: 48px;
+  }
+
+  @include desktop {
+    width: 100%;
+    padding-bottom: 48px;
+  }
+}

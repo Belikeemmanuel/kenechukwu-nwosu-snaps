@@ -4,7 +4,16 @@
 
 .our-mission {
   background-color: $background-primarycolor;
-  padding: 1rem;
+  padding-top: 1rem;
+
+  @include tablet {
+    padding-top: 1.5rem;
+  }
+
+  @include desktop {
+    padding-top: 4rem;
+    width: 72%;
+  }
 
   &__heading {
     font-weight: 300;
@@ -12,8 +21,17 @@
 
   &__writeup {
     margin: 0rem;
-    padding: 24px 0px;
+    padding: 1.5rem 0rem 3rem 0px;
     text-align: left;
+
+    @include tablet {
+      padding: 1.5rem 0rem 3.5rem 0rem;
+    }
+
+    @include desktop {
+      padding: 3rem 0px 4rem 0rem;
+      width: 100%;
+    }
 
     &-italic {
       font-style: italic;

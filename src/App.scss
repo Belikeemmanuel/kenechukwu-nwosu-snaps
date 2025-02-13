@@ -1,1 +1,22 @@
 @use "./styles/partials/global" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+
+.main {
+  background-color: $background-primarycolor;
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+    padding: 0px 16px;
+
+    @include tablet {
+      padding: 0px 32px;
+    }
+    @include desktop {
+      padding: 0px 32px;
+    }
+  }
+}

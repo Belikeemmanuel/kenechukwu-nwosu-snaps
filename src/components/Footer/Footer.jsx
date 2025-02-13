@@ -3,9 +3,9 @@ import Icon from "../FooterIcon/FooterIcon.jsx";
 
 function Footer() {
   return (
-    <div>
-      <div>
-        <h1>Snaps</h1>
+    <div className="footer">
+      <div className="footer__top">
+        <h1 className="footer__header">Snaps</h1>
         <div className="footer__text">
           <div className="footer__text-item">
             <p>For photographers</p>
@@ -25,18 +25,18 @@ function Footer() {
       <div className="footer__icons">
         <Icon />
       </div>
-      <small className="footer-bottom">
-        &copy; 2024 Snaps.{" "}
-        <a href="" className="footer-bottom__link">
-          Terms
+      <p className="footer__bottom">
+        &copy; 2024 Snaps{" "}
+        <a href="" className="footer__bottom-link">
+          . Terms
         </a>{" "}
-        <a href="" className="footer-bottom__link">
+        <a href="" className="footer__bottom-link">
           Privacy
         </a>{" "}
-        <a href="" className="footer-bottom__link">
+        <a href="" className="footer__bottom-link">
           Cookies
         </a>
-      </small>
+      </p>
     </div>
   );
 }

@@ -7,6 +7,10 @@
   background-color: $background-primarycolor;
   @include flex-style(row, center, space-between);
 
+  @include tablet {
+    padding: 32px;
+  }
+
   &__text {
     color: $black-primarycolor;
   }
@@ -17,22 +21,37 @@
     border-radius: 9999px;
     background-color: $white-secondarycolor;
     color: $forestgreen-primarycolor;
-    line-height: 0.9375rem;
-    font-size: 0.75rem;
+    font-size: 16px;
     font-weight: 500;
     font-family: $primary-font;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    width: 30%;
 
     @include tablet {
       padding: 11px 22px;
       line-height: 26px;
       font-size: 20px;
+      width: 20%;
+    }
+
+    @include desktop {
+      width: 10%;
+    }
+    &:hover {
+      background-color: $forestgreen-primarycolor;
+      color: $white-secondarycolor;
+      .header__icon {
+        fill: $white-secondarycolor;
+      }
     }
   }
 
   &__icon {
-    font-size: 14px;
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: $forestgreen-primarycolor;
   }
 }
