@@ -7,11 +7,11 @@
   padding: 1.5rem 1rem;
 
   @include tablet {
-    padding: 48px 32px 32px 32px;
+    padding: 3rem 2rem 2rem 2rem;
   }
 
   @include desktop {
-    padding: 64px 32px 32px 32px;
+    padding: 4rem 2rem 2rem 2rem;
   }
 
   &__top {
@@ -21,14 +21,14 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding-bottom: 72px;
+      padding-bottom: 4.5rem;
     }
 
     @include desktop {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding-bottom: 72px;
+      padding-bottom: 4.5rem;
     }
   }
 
@@ -42,14 +42,14 @@
       align-items: flex-start;
       justify-content: space-between;
       width: 48%;
-      padding-bottom: 48px;
+      padding-bottom: 3rem;
     }
     @include desktop {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       width: 50%;
-      padding-bottom: 48px;
+      padding-bottom: 3rem;
     }
   }
 
@@ -60,7 +60,7 @@
     flex-direction: column;
 
     @include desktop {
-      padding: 0px;
+      padding: 0rem;
     }
   }
 
@@ -78,7 +78,7 @@
     padding: 0.75rem 0rem;
 
     @include tablet {
-      padding: 72px 0px 24px 0px;
+      padding: 4.5rem 0rem 1.5rem 0rem;
       width: 70%;
     }
 
@@ -96,13 +96,13 @@
 
     @include tablet {
       width: 35%;
-      font-size: 12px;
+      font-size: 0.75rem;
     }
 
     @include desktop {
       width: 20%;
-      font-size: 12px;
-      padding-top: 72px;
+      font-size: 0.75rem;
+      padding-top: 4.5rem;
     }
   }
 

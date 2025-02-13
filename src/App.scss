@@ -10,13 +10,14 @@
   }
 
   &__content {
-    padding: 0px 16px;
+    padding: 0rem 1rem;
 
     @include tablet {
-      padding: 0px 32px;
+      padding: 0rem 2rem;
     }
     @include desktop {
-      padding: 0px 32px;
+      padding: 0rem 2rem;
+      min-width: 67%;
     }
   }
 }

@@ -12,14 +12,20 @@ function App() {
   const filterVisibility = () => {
     setFilterVisible(!filterVisible);
   };
+
+  const [filteredTags, setFileredtags] = useState("");
+
+  function filterAllTag(tag) {
+    setFileredtags(tag);
+  }
   return (
     <>
       <Header filterVisibility={filterVisibility} />
       <main className="main">
-        {filterVisible && <Filter />}
+        {filterVisible && <Filter filterAllTag={filterAllTag} />}
         <div className="main__content">
           <WriteUp />
-          <PhotoCardList />
+          <PhotoCardList filteredTags={filteredTags} />
         </div>
       </main>
       <footer>

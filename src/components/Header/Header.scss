@@ -8,7 +8,7 @@
   @include flex-style(row, center, space-between);
 
   @include tablet {
-    padding: 32px;
+    padding: 2rem;
   }
 
   &__text {
@@ -16,24 +16,24 @@
   }
 
   &__button {
-    padding: 8px 16px;
-    border: 2px solid $forestgreen-primarycolor;
-    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    border: 0.125rem solid $forestgreen-primarycolor;
+    border-radius: 624.9375rem;
     background-color: $white-secondarycolor;
     color: $forestgreen-primarycolor;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     font-family: $primary-font;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 0.5rem;
     width: 30%;
 
     @include tablet {
-      padding: 11px 22px;
-      line-height: 26px;
-      font-size: 20px;
+      padding: 0.6875rem 1.375rem;
+      line-height: 1.625rem;
+      font-size: 1.25rem;
       width: 20%;
     }
 
