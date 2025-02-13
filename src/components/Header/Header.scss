@@ -38,9 +38,17 @@
     }
 
     @include desktop {
-      width: 10%;
+      width: 12%;
     }
     &:hover {
+      background-color: $forestgreen-primarycolor;
+      color: $white-secondarycolor;
+      .header__icon {
+        fill: $white-secondarycolor;
+      }
+    }
+
+    &--active {
       background-color: $forestgreen-primarycolor;
       color: $white-secondarycolor;
       .header__icon {
@@ -50,8 +58,8 @@
   }
 
   &__icon {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 19.2px;
+    height: 19.2px;
     fill: $forestgreen-primarycolor;
   }
 }

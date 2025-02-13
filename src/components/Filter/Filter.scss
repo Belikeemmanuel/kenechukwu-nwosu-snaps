@@ -60,7 +60,7 @@
       cursor: pointer;
     }
 
-    &:active {
+    &--active {
       background-color: $forestgreen-primarycolor;
       color: $white-secondarycolor;
     }

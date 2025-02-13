@@ -1,11 +1,16 @@
 import "./Header.scss";
-import icon from "../../assets/images/Filter.svg";
+// import icon from "../../assets/images/Filter.svg";
 
-function Header({ filterVisibility }) {
+function Header({ filterVisibility, filterVisible }) {
   return (
     <div className="header">
       <h1 className="header__text">Snaps</h1>
-      <button onClick={filterVisibility} className="header__button">
+      <button
+        onClick={filterVisibility}
+        className={`header__button ${
+          filterVisible ? "header__button--active" : ""
+        }`}
+      >
         Filters{" "}
         <svg
           className="header__icon"

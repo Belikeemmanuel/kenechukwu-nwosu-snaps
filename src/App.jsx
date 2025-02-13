@@ -20,7 +20,10 @@ function App() {
   }
   return (
     <>
-      <Header filterVisibility={filterVisibility} />
+      <Header
+        filterVisibility={filterVisibility}
+        filterVisible={filterVisible}
+      />
       <main className="main">
         {filterVisible && <Filter filterAllTag={filterAllTag} />}
         <div className="main__content">
