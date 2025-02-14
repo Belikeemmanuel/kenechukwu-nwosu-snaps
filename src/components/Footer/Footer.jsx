@@ -5,7 +5,9 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer__top">
-        <h1 className="footer__header">Snaps</h1>
+        <a href="../../index.html" className="footer__header">
+          Snaps
+        </a>
         <div className="footer__text">
           <div className="footer__text-item">
             <p>For photographers</p>

@@ -1,10 +1,11 @@
 import "./Header.scss";
-// import icon from "../../assets/images/Filter.svg";
 
 function Header({ filterVisibility, filterVisible }) {
   return (
     <div className="header">
-      <h1 className="header__text">Snaps</h1>
+      <a href="../../index.html" className="header__text">
+        Snaps
+      </a>
       <button
         onClick={filterVisibility}
         className={`header__button ${
