@@ -1,4 +1,5 @@
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import Filter from "./components/Filter/Filter.jsx";
@@ -19,22 +20,24 @@ function App() {
     setFileredtags(tag);
   }
   return (
-    <>
-      <Header
-        filterVisibility={filterVisibility}
-        filterVisible={filterVisible}
-      />
-      <main className="main">
-        {filterVisible && <Filter filterAllTag={filterAllTag} />}
-        <div className="main__content">
-          <WriteUp />
-          <PhotoCardList filteredTags={filteredTags} />
-        </div>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+    <BrowserRouter>
+      <>
+        <Header
+          filterVisibility={filterVisibility}
+          filterVisible={filterVisible}
+        />
+        <main className="main">
+          {filterVisible && <Filter filterAllTag={filterAllTag} />}
+          <div className="main__content">
+            <WriteUp />
+            <PhotoCardList filteredTags={filteredTags} />
+          </div>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </>
+    </BrowserRouter>
   );
 }
 
