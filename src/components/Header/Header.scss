@@ -24,6 +24,17 @@
     }
   }
 
+  &__home-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $forestgreen-primarycolor;
+    &-text {
+      margin: 0rem;
+      font-size: 1.25rem;
+    }
+  }
+
   &__button {
     padding: 0.5rem 0.625rem;
     border: 0.125rem solid $forestgreen-primarycolor;

@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import PhotoPageCard from "../../components/PhotoPageCard/PhotoPageCard.jsx";
 import PhotoPageForm from "../../components/PhotoPageForm/PhotoPageForm.jsx";
+import PhotoPageComment from "../../components/PhotoPageComment/PhotoPageComment.jsx";
 
 function PhotoCardPage() {
   const { id } = useParams();
@@ -30,18 +31,7 @@ function PhotoCardPage() {
       <PhotoPageCard id={id} />
       <PhotoPageForm comments={comments} id={id} setComments={setComments} />
 
-      <div className="comments">
-        <h3>{comments.length} Comments</h3>
-        {comments.map((comment) => (
-          <div key={comment.id} className="comments__list">
-            <p>
-              <strong>{comment.name}</strong> -{" "}
-              {new Date(comment.timestamp).toLocaleDateString()}
-            </p>
-            <p>{comment.comment}</p>
-          </div>
-        ))}
-      </div>
+      <PhotoPageComment comments={comments} />
     </div>
   );
 }

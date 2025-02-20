@@ -1,0 +1,25 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments {
+  padding-bottom: 36px;
+  &__header {
+    padding: 8px 0px;
+  }
+  &__list {
+    padding: 8px 0px;
+    border-top: 2px solid $seagreen-secondarycolor;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    color: $forestgreen-primarycolor;
+    font-weight: 500;
+    padding-bottom: 8px;
+  }
+
+  &__bottom {
+    font-weight: 500;
+  }
+}
