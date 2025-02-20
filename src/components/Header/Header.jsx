@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 function Header({ filterVisibility, filterVisible }) {
   const location = useLocation();
   return (
-    <div className="header">
+    <header className="header">
       <Link to={"/"} className="header__text">
         Snaps
       </Link>
@@ -42,7 +42,7 @@ function Header({ filterVisibility, filterVisible }) {
           </svg>{" "}
         </button>
       )}
-    </div>
+    </header>
   );
 }
 

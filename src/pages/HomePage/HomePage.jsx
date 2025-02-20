@@ -5,10 +5,10 @@ import WriteUp from "../../components/WriteUp/WriteUp.jsx";
 import PhotoCardList from "../../components/PhotoCardList/PhotoCardList.jsx";
 
 function HomePage({ filterVisible }) {
-  const [filteredTags, setFileredtags] = useState("");
+  const [filteredTags, setFilteredTags] = useState("");
 
   function filterAllTag(tag) {
-    setFileredtags(tag);
+    setFilteredTags(tag);
   }
   return (
     <div>

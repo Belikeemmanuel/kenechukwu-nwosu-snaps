@@ -9,15 +9,27 @@ function Footer() {
           Snaps
         </a>
         <div className="footer__text">
-          <div className="footer__text-item">
-            <p>For photographers</p>
-            <p>Hire talent</p>
-            <p>Inspiration</p>
+          <div className="footer__text-list">
+            <a href className="footer__text-item">
+              For photographers
+            </a>
+            <a href="" className="footer__text-item">
+              Hire talent
+            </a>
+            <a href="" className="footer__text-item">
+              Inspiration
+            </a>
           </div>
-          <div className="footer__text-item">
-            <p>About</p>
-            <p>Careers</p>
-            <p>Support</p>
+          <div className="footer__text-list">
+            <a href="" className="footer__text-item">
+              About
+            </a>
+            <a href="" className="footer__text-item">
+              Careers
+            </a>
+            <a href="" className="footer__text-item">
+              Support
+            </a>
           </div>
           <div className="footer__icons-desktop">
             <Icon />
