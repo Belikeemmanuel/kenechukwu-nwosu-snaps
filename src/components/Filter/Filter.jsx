@@ -1,18 +1,28 @@
 import "./Filter.scss";
-import FilterTags from "../../data/tags.json";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function Filter({ filterAllTag }) {
   const [activeTag, setActiveTag] = useState("");
+  const [FilterTags, setFilterTags] = useState([]);
+
+  useEffect(() => {
+    const loadFilter = async () => {
+      try {
+        const response = await axios.get(
+          `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=29091757-a36d-414d-8964-138221113fb6`
+        );
+        setFilterTags(response.data);
+      } catch (error) {
+        console.error("Error fetching tags:", error);
+      }
+    };
+    loadFilter();
+  });
 
   const handleTagClick = (tag) => {
-    if (activeTag) {
-      setActiveTag("");
-      filterAllTag("");
-    } else {
-      setActiveTag(tag);
-      filterAllTag(tag);
-    }
+    setActiveTag((prevTag) => (prevTag === tag ? "" : tag));
+    filterAllTag((prevTag) => (prevTag === tag ? "" : tag));
   };
 
   return (

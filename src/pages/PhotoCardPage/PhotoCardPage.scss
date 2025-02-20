@@ -1,0 +1,7 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.photo-page {
+  padding: 1rem;
+  background-color: $background-primarycolor;
+}

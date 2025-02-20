@@ -1,0 +1,68 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.photo-page__card {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: $background-secondarycolor;
+  border: 1px solid $seagreen-secondarycolor;
+}
+
+.photo-page__display {
+  .photo-page__image {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+  }
+}
+
+.photo-page__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px;
+  justify-content: left;
+
+  .photo-page__tags-item {
+    padding: 8px;
+    background-color: $white-secondarycolor;
+    border-radius: 8px;
+    border: 1px solid $seagreen-secondarycolor;
+  }
+}
+
+.photo-page__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 16px 16px 16px;
+}
+
+.photo-page__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-page__likes {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  &-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  &-item {
+    font-size: 14px;
+  }
+}
+
+.photo-page__name {
+  display: flex;
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.photo-page__date {
+  font-size: 14px;
+}
