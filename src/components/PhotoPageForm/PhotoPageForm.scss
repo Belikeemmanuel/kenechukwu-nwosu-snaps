@@ -9,70 +9,95 @@
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
-}
 
-.form__name {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  @include tablet {
+    line-height: 1.625rem;
+    font-size: 1.25rem;
+  }
 
-  &-input {
-    min-width: 280px;
-    padding: 8px;
-    height: 30px;
-    border-radius: 8px;
-    font-family: $primary-font;
-    font-size: 12px;
-    line-height: 16px;
-    border: 2px solid $seagreen-secondarycolor;
+  &__name {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-    &:active {
-      border: 2px solid $forestgreen-primarycolor;
-    }
-    &--error {
-      border: 2px solid #b10606;
+    &-input {
+      min-width: 280px;
+      padding: 8px;
+      height: 1.875rem;
+      border-radius: 8px;
+      font-family: $primary-font;
+      font-size: 12px;
+      line-height: 16px;
+      border: 2px solid $seagreen-secondarycolor;
+
+      @include tablet {
+        height: 2.5rem;
+        line-height: 1.625rem;
+        font-size: 1.25rem;
+      }
+
+      &:active {
+        border: 2px solid $forestgreen-primarycolor;
+      }
+      &--error {
+        border: 2px solid #b10606;
+      }
     }
   }
-}
 
-.form__comment {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-  &-input {
-    min-width: 280px;
-    padding: 8px;
-    height: 70px;
-    border-radius: 8px;
-    font-family: $primary-font;
-    font-size: 12px;
-    line-height: 16px;
-    border: 2px solid $seagreen-secondarycolor;
-    resize: none;
+    &-input {
+      min-width: 280px;
+      padding: 8px;
+      height: 4.375rem;
+      border-radius: 8px;
+      font-family: $primary-font;
+      font-size: 12px;
+      line-height: 16px;
+      border: 2px solid $seagreen-secondarycolor;
+      resize: none;
 
-    &:active {
-      border: 2px solid $forestgreen-primarycolor;
-    }
-    &--error {
-      border: 2px solid #b10606;
+      @include tablet {
+        line-height: 1.625rem;
+        font-size: 1.25rem;
+        height: 5.625rem;
+      }
+
+      &:active {
+        border: 2px solid $forestgreen-primarycolor;
+      }
+      &--error {
+        border: 2px solid #b10606;
+      }
     }
   }
-}
 
-.form__cta {
-  display: flex;
-  justify-content: right;
-}
-.form__button {
-  font-family: $primary-font;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border-width: 0px;
-  border-color: $forestgreen-primarycolor;
-  color: $white-secondarycolor;
-  background-color: $forestgreen-primarycolor;
+  &__cta {
+    display: flex;
+    justify-content: right;
+  }
+
+  &__button {
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-width: 0px;
+    border-color: $forestgreen-primarycolor;
+    color: $white-secondarycolor;
+    background-color: $forestgreen-primarycolor;
+
+    @include tablet {
+      line-height: 1.625rem;
+      font-size: 1.25rem;
+      padding: 10px 26px;
+      border-radius: 10px;
+    }
+  }
 }

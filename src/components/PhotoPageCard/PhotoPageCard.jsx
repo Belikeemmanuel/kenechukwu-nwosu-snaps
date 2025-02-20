@@ -23,8 +23,8 @@ function PhotoPageCard({ id }) {
   if (!photo) return <p>Loading...</p>;
 
   return (
-    <>
-      <article className="photo-page__card">
+    <article className="photo-page">
+      <div className="photo-page__card">
         <div className="photo-page__display">
           <img
             src={photo.photo}
@@ -65,8 +65,8 @@ function PhotoPageCard({ id }) {
             {new Date(photo.timestamp).toLocaleDateString()}
           </p>
         </div>
-      </article>
-    </>
+      </div>
+    </article>
   );
 }
 

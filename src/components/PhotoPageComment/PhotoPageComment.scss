@@ -2,13 +2,22 @@
 @use "../../styles/partials/variables" as *;
 
 .comments {
-  padding-bottom: 36px;
+  padding-bottom: 2.25rem;
+
   &__header {
-    padding: 8px 0px;
+    padding: 0.5rem 0rem;
+
+    @include tablet {
+      padding: 1rem 0rem;
+    }
   }
   &__list {
-    padding: 8px 0px;
-    border-top: 2px solid $seagreen-secondarycolor;
+    padding: 0.5rem 0rem;
+    border-top: 0.125rem solid $seagreen-secondarycolor;
+
+    @include tablet {
+      padding: 1rem 0rem;
+    }
   }
 
   &__top {
@@ -16,7 +25,18 @@
     justify-content: space-between;
     color: $forestgreen-primarycolor;
     font-weight: 500;
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
+
+    @include tablet {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__top-item {
+    @include tablet {
+      font-size: 0.75rem;
+      line-height: 0.9375rem;
+    }
   }
 
   &__bottom {

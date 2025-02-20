@@ -1,7 +1,11 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.photo-page {
+.photo-card-page {
   padding: 1rem;
   background-color: $background-primarycolor;
+
+  @include tablet {
+    padding: 2rem;
+  }
 }

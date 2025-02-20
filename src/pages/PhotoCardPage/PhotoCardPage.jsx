@@ -27,7 +27,7 @@ function PhotoCardPage() {
   }, []);
 
   return (
-    <div className="photo-page">
+    <div className="photo-card-page">
       <PhotoPageCard id={id} />
       <PhotoPageForm comments={comments} id={id} setComments={setComments} />
 

@@ -1,68 +1,112 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.photo-page__card {
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: $background-secondarycolor;
-  border: 1px solid $seagreen-secondarycolor;
-}
-
-.photo-page__display {
-  .photo-page__image {
-    width: 100%;
-    border-radius: 8px 8px 0px 0px;
+.photo-page {
+  &__card {
+    border-radius: 1rem;
+    background-color: $background-secondarycolor;
+    border: 0.125rem solid $seagreen-secondarycolor;
   }
-}
 
-.photo-page__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 16px;
-  justify-content: left;
+  &__image {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  }
 
-  .photo-page__tags-item {
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    justify-content: left;
+
+    @include tablet {
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+  }
+
+  &__tags-item {
     padding: 8px;
     background-color: $white-secondarycolor;
     border-radius: 8px;
     border: 1px solid $seagreen-secondarycolor;
-  }
-}
 
-.photo-page__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0px 16px 16px 16px;
-}
+    @include tablet {
+      padding: 8px 24px;
+      border-radius: 12px;
+    }
 
-.photo-page__text {
-  display: flex;
-  flex-direction: column;
-}
-
-.photo-page__likes {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-
-  &-icon {
-    width: 13px;
-    height: 11px;
+    &:hover {
+      background-color: $seagreen-secondarycolor;
+    }
   }
 
-  &-item {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 16px 16px 16px;
+
+    @include tablet {
+      padding: 0px 24px 24px 24px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      width: 70%;
+      justify-content: space-between;
+    }
+  }
+
+  &__likes {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    &-icon {
+      width: 13px;
+      height: 11px;
+
+      @include tablet {
+        width: 16px;
+        height: 15px;
+      }
+    }
+
+    &-item {
+      font-size: 14px;
+
+      @include tablet {
+        line-height: 1.625rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    padding-top: 8px;
     font-size: 14px;
+
+    @include tablet {
+      padding: 0px;
+      line-height: 1.625rem;
+      font-size: 1.25rem;
+    }
   }
-}
 
-.photo-page__name {
-  display: flex;
-  padding-top: 8px;
-  font-size: 14px;
-}
+  &__date {
+    font-size: 14px;
 
-.photo-page__date {
-  font-size: 14px;
+    @include tablet {
+      line-height: 1.625rem;
+      font-size: 1.25rem;
+    }
+  }
 }

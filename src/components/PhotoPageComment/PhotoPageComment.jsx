@@ -10,8 +10,10 @@ function PhotoPageComment({ comments }) {
       {comments.map((comment) => (
         <div key={comment.id} className="comments__list">
           <div className="comments__top">
-            <p>{comment.name}</p>{" "}
-            <p>{new Date(comment.timestamp).toLocaleDateString()}</p>
+            <p className="comments__top-item">{comment.name}</p>{" "}
+            <p className="comments__top-item">
+              {new Date(comment.timestamp).toLocaleDateString()}
+            </p>
           </div>
           <p className="comments__bottom">{comment.comment}</p>
         </div>
