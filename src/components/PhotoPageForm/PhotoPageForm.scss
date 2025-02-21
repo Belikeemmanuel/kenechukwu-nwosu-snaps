@@ -4,31 +4,37 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 48px 0px 24px 0px;
+  width: 100%;
+  gap: 1rem;
+  padding: 3rem 0rem 1.5rem 0rem;
   font-family: $primary-font;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
 
   @include tablet {
     line-height: 1.625rem;
     font-size: 1.25rem;
   }
 
+  @include desktop {
+    width: 70%;
+    padding: 4rem 0rem 1.5rem 0rem;
+  }
+
   &__name {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
 
     &-input {
-      min-width: 280px;
-      padding: 8px;
+      min-width: 17.5rem;
+      padding: 0.5rem;
       height: 1.875rem;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       font-family: $primary-font;
-      font-size: 12px;
-      line-height: 16px;
-      border: 2px solid $seagreen-secondarycolor;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      border: 0.125rem solid $seagreen-secondarycolor;
 
       @include tablet {
         height: 2.5rem;
@@ -37,10 +43,10 @@
       }
 
       &:active {
-        border: 2px solid $forestgreen-primarycolor;
+        border: 0.125rem solid $forestgreen-primarycolor;
       }
       &--error {
-        border: 2px solid #b10606;
+        border: 0.125rem solid #b10606;
       }
     }
   }
@@ -48,17 +54,17 @@
   &__comment {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
 
     &-input {
-      min-width: 280px;
-      padding: 8px;
+      min-width: 17.5rem;
+      padding: 0.5rem;
       height: 4.375rem;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       font-family: $primary-font;
-      font-size: 12px;
-      line-height: 16px;
-      border: 2px solid $seagreen-secondarycolor;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      border: 0.125rem solid $seagreen-secondarycolor;
       resize: none;
 
       @include tablet {
@@ -68,10 +74,10 @@
       }
 
       &:active {
-        border: 2px solid $forestgreen-primarycolor;
+        border: 0.125rem solid $forestgreen-primarycolor;
       }
       &--error {
-        border: 2px solid #b10606;
+        border: 0.125rem solid #b10606;
       }
     }
   }
@@ -83,12 +89,12 @@
 
   &__button {
     font-family: $primary-font;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
-    line-height: 16px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border-width: 0px;
+    line-height: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border-width: 0rem;
     border-color: $forestgreen-primarycolor;
     color: $white-secondarycolor;
     background-color: $forestgreen-primarycolor;
@@ -96,8 +102,8 @@
     @include tablet {
       line-height: 1.625rem;
       font-size: 1.25rem;
-      padding: 10px 26px;
-      border-radius: 10px;
+      padding: 0.625rem 1.625rem;
+      border-radius: 0.625rem;
     }
   }
 }

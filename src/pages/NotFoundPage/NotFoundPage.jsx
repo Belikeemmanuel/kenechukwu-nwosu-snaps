@@ -1,11 +1,8 @@
 import "./NotFoundPage.scss";
+import TorchApp from "../../components/TorchApp/TorchApp";
 
 function NotFoundPage() {
-  return (
-    <div>
-      <h1>Not Found please!</h1>
-    </div>
-  );
+  return <TorchApp />;
 }
 
 export default NotFoundPage;

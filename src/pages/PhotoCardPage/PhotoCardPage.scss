@@ -8,4 +8,13 @@
   @include tablet {
     padding: 2rem;
   }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0rem 5rem 0rem 5rem;
+  }
 }

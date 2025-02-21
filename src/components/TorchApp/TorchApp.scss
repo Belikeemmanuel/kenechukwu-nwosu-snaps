@@ -1,0 +1,41 @@
+@use "../../styles/partials/variables" as *;
+
+.torch-body {
+  height: 100vh;
+  width: 100%;
+  background: url("https://wallpapercave.com/wp/6SLzBEY.jpg") no-repeat left top;
+  background-size: cover;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: $white-secondarycolor;
+  padding: 2.25rem;
+  position: relative;
+}
+
+.torch {
+  margin: -9.375rem 0 0 -9.375rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  box-shadow: 0 0 0 9999rem #000000f7;
+  opacity: 1;
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+
+  &:after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0rem;
+    left: 0rem;
+    box-shadow: inset 0 0 2.5rem 0.125rem #000,
+      0 0 1.25rem 0.25rem rgba(13, 13, 10, 0.2);
+  }
+}

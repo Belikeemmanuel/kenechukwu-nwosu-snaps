@@ -1,16 +1,17 @@
 import "./Footer.scss";
 import Icon from "../FooterIcon/FooterIcon.jsx";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="footer">
       <div className="footer__top">
-        <a href="../../index.html" className="footer__header">
+        <Link to={"/"} className="footer__header">
           Snaps
-        </a>
+        </Link>
         <div className="footer__text">
           <div className="footer__text-list">
-            <a href className="footer__text-item">
+            <a href="" className="footer__text-item">
               For photographers
             </a>
             <a href="" className="footer__text-item">

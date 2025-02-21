@@ -2,7 +2,12 @@
 @use "../../styles/partials/variables" as *;
 
 .comments {
+  width: 100%;
   padding-bottom: 2.25rem;
+
+  @include desktop {
+    width: 70%;
+  }
 
   &__header {
     padding: 0.5rem 0rem;
