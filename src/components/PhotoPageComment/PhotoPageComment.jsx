@@ -7,8 +7,8 @@ function PhotoPageComment({ comments }) {
       <p className="comments__header">
         {comments.length} {`Comment${comments.length > 1 ? "s" : ""}`}
       </p>
-      {comments.map((comment) => (
-        <div key={comment.id} className="comments__list">
+      {comments.map((comment, index) => (
+        <div key={comment.id || index} className="comments__list">
           <div className="comments__top">
             <p className="comments__top-item">{comment.name}</p>{" "}
             <p className="comments__top-item">

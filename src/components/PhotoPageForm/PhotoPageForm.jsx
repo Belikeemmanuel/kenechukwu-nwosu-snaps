@@ -34,7 +34,8 @@ function PhotoPageForm({ id, comments, setComments }) {
         name: name,
         comment: newComment,
       });
-      setComments([response.data, ...comments]);
+      const newComments = [response.data, ...comments];
+      setComments(newComments);
       setNewComment("");
       setName("");
     } catch (error) {
