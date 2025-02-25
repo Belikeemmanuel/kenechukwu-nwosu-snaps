@@ -15,6 +15,10 @@
     padding-bottom: 3rem;
   }
 
+  @include desktop {
+    gap: 1.5rem;
+  }
+
   &-link {
     color: $black-primarycolor;
   }
