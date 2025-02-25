@@ -2,6 +2,8 @@ import "./Filter.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+const Url = import.meta.env.VITE_BACKEND_URL;
+
 function Filter({ filterAllTag }) {
   const [activeTag, setActiveTag] = useState("");
   const [FilterTags, setFilterTags] = useState([]);
@@ -9,9 +11,7 @@ function Filter({ filterAllTag }) {
   useEffect(() => {
     const loadFilter = async () => {
       try {
-        const response = await axios.get(
-          `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=29091757-a36d-414d-8964-138221113fb6`
-        );
+        const response = await axios.get(`${Url}/tags`);
         setFilterTags(response.data);
       } catch (error) {
         console.error("Error fetching tags:", error);

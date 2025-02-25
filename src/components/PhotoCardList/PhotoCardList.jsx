@@ -3,7 +3,7 @@ import PhotoCard from "../PhotoCard/PhotoCard.jsx";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useParams } from "react-router-dom";
+const Url = import.meta.env.VITE_BACKEND_URL;
 
 function PhotoCardList({ filteredTags }) {
   const [photoData, setPhotoData] = useState([]);
@@ -11,10 +11,7 @@ function PhotoCardList({ filteredTags }) {
   useEffect(() => {
     const loadPhotos = async () => {
       try {
-        const response = await axios.get(
-          `https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=29091757-a36d-414d-8964-138221113fb6`
-        );
-        // console.log(response);
+        const response = await axios.get(`${Url}/photos`);
         setPhotoData(response.data);
       } catch (error) {
         console.error("Error fetching photos:", error);
@@ -39,7 +36,7 @@ function PhotoCardList({ filteredTags }) {
             >
               <PhotoCard
                 photographer={item.photographer}
-                photo={item.photo}
+                photo={Url + item.photo}
                 tags={item.tags}
               />
             </Link>

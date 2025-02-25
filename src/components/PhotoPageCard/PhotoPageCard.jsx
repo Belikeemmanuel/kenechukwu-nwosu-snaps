@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import "./PhotoPageCard.scss";
 import axios from "axios";
+const Url = import.meta.env.VITE_BACKEND_URL;
 
 function PhotoPageCard({ id }) {
   const [photo, setPhoto] = useState(null);
 
   const fetchPhoto = async () => {
     try {
-      const photoResponse = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=29091757-a36d-414d-8964-138221113fb6`
-      );
+      const photoResponse = await axios.get(`${Url}/photos/${id}`);
       setPhoto(photoResponse.data);
     } catch (error) {
       console.error("Error fetching photo:", error);
@@ -27,7 +26,7 @@ function PhotoPageCard({ id }) {
       <div className="photo-page__card">
         <div className="photo-page__display">
           <img
-            src={photo.photo}
+            src={Url + photo.photo}
             alt={photo.photoDescription}
             className="photo-page__image"
           />

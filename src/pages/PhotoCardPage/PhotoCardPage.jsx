@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import PhotoPageCard from "../../components/PhotoPageCard/PhotoPageCard.jsx";
 import PhotoPageForm from "../../components/PhotoPageForm/PhotoPageForm.jsx";
 import PhotoPageComment from "../../components/PhotoPageComment/PhotoPageComment.jsx";
+const Url = import.meta.env.VITE_BACKEND_URL;
 
 function PhotoCardPage() {
   const { id } = useParams();
@@ -12,9 +13,7 @@ function PhotoCardPage() {
 
   const fetchComments = async () => {
     try {
-      const commentsResponse = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=29091757-a36d-414d-8964-138221113fb6`
-      );
+      const commentsResponse = await axios.get(`${Url}/photos/${id}/comments`);
       commentsResponse.data.sort((a, b) => b.timestamp - a.timestamp);
       setComments(commentsResponse.data);
     } catch (error) {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./PhotoPageForm.scss";
+const Url = import.meta.env.VITE_BACKEND_URL;
 
 function PhotoPageForm({ id, comments, setComments }) {
   const [name, setName] = useState("");
@@ -29,13 +30,10 @@ function PhotoPageForm({ id, comments, setComments }) {
     }
 
     try {
-      const response = await axios.post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=29091757-a36d-414d-8964-138221113fb6`,
-        {
-          comment: newComment,
-          name: name,
-        }
-      );
+      const response = await axios.post(`${Url}/photos/${id}/comments`, {
+        name: name,
+        comment: newComment,
+      });
       setComments([response.data, ...comments]);
       setNewComment("");
       setName("");
