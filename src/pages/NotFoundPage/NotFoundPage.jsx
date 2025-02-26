@@ -1,4 +1,3 @@
-import "./NotFoundPage.scss";
 import TorchApp from "../../components/TorchApp/TorchApp";
 
 function NotFoundPage() {

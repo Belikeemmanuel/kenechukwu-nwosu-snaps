@@ -20,6 +20,15 @@
   }
 
   &-link {
+    display: flex;
     color: $black-primarycolor;
+
+    @include tablet {
+      flex-basis: calc(50% - 1rem);
+    }
+
+    @include desktop {
+      flex-basis: calc(33.33% - 1rem);
+    }
   }
 }

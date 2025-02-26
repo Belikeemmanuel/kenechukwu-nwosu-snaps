@@ -11,26 +11,26 @@ function Footer() {
         </Link>
         <div className="footer__text">
           <div className="footer__text-list">
-            <a href="" className="footer__text-item">
+            <Link to="" className="footer__text-item">
               For photographers
-            </a>
-            <a href="" className="footer__text-item">
+            </Link>
+            <Link to="" className="footer__text-item">
               Hire talent
-            </a>
-            <a href="" className="footer__text-item">
+            </Link>
+            <Link to="" className="footer__text-item">
               Inspiration
-            </a>
+            </Link>
           </div>
           <div className="footer__text-list">
-            <a href="" className="footer__text-item">
+            <Link to="" className="footer__text-item">
               About
-            </a>
-            <a href="" className="footer__text-item">
+            </Link>
+            <Link to="" className="footer__text-item">
               Careers
-            </a>
-            <a href="" className="footer__text-item">
+            </Link>
+            <Link to="" className="footer__text-item">
               Support
-            </a>
+            </Link>
           </div>
           <div className="footer__icons-desktop">
             <Icon />
@@ -42,15 +42,15 @@ function Footer() {
       </div>
       <p className="footer__bottom">
         &copy; 2024 Snaps{" "}
-        <a href="" className="footer__bottom-link">
+        <Link to="" className="footer__bottom-link">
           . Terms
-        </a>{" "}
-        <a href="" className="footer__bottom-link">
+        </Link>{" "}
+        <Link to="" className="footer__bottom-link">
           Privacy
-        </a>{" "}
-        <a href="" className="footer__bottom-link">
+        </Link>{" "}
+        <Link to="" className="footer__bottom-link">
           Cookies
-        </a>
+        </Link>
       </p>
     </div>
   );
