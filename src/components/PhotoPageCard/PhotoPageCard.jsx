@@ -61,7 +61,11 @@ function PhotoPageCard({ id }) {
             <p className="photo-page__name">Photo by {photo.photographer}</p>
           </div>
           <p className="photo-page__date">
-            {new Date(photo.timestamp).toLocaleDateString()}
+            {new Date(photo.timestamp).toLocaleDateString("en-US", {
+              month: "2-digit",
+              day: "2-digit",
+              year: "numeric",
+            })}
           </p>
         </div>
       </div>

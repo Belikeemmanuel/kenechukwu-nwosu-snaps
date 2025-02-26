@@ -12,7 +12,11 @@ function PhotoPageComment({ comments }) {
           <div className="comments__top">
             <p className="comments__top-item">{comment.name}</p>{" "}
             <p className="comments__top-item">
-              {new Date(comment.timestamp).toLocaleDateString()}
+              {new Date(comment.timestamp).toLocaleDateString("en-US", {
+                month: "2-digit",
+                day: "2-digit",
+                year: "numeric",
+              })}
             </p>
           </div>
           <p className="comments__bottom">{comment.comment}</p>
